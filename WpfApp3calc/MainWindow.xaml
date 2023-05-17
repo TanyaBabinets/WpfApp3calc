@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp3calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3calc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto">
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox x:Name="txtArg1" Width="80" Padding="10" Margin="5,0,5,0" HorizontalContentAlignment="Center"/>
+   <ComboBox x:Name="cboOperation" Padding="10" Width="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="txtArg2" Width="80" Padding="10" Margin="5,0,5,0" HorizontalContentAlignment="Center"/>
+            <Label Width="40" Padding="10" HorizontalContentAlignment="Center">=
+                </Label>
+            <Label Name="lblResult" Width="80" Padding="0" Margin="5,0"
+BorderBrush="#FF999999" BorderThickness="1"
+                   VerticalContentAlignment="Center" HorizontalContentAlignment="Center">REsult</Label>
+            
+        </StackPanel>
+    <Grid Grid.Row="1">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="3*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+            <Button x:Name="btnCalculate" Grid.Column="0" Margin="10,20" Click="btnCalculate_Click">Calculate</Button>
+            <Button x:Name="btnClear" Grid.Column="1" Margin="10,20" Click="btnClear_Click" >C</Button>>
+        </Grid>
+    </Grid>
+</Window>
